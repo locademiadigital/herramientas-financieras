@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Educación Financiera Gratis</title>
+    <link rel="icon" type="image/png" href="./img/favicon.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <meta property="og:url" content="https://www.your-domain.com/your-page.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Educación Financiera Gratis" />
+    <meta property="og:description" content="Educación Financiera Gratis" />
+    <meta property="og:image" content="https://www.your-domain.com/path/image.jpg" />
+
+    <style>
+        body > .container {
+        padding: 50px 15px 0;
+        }
+        .invalid {	
+        border: 1px dotted red;
+        border-bottom-style: double;
+        border-bottom-width: 2px;
+        }
+        tr:hover, tr.selected {
+        background-color: #87e454bf
+        }
+    </style>
+<!-- <script src="https://www.google.com/recaptcha/api.js?render=6LfFSuQUAAAAACf7MxQW0D4Bs3r3R8hKdGOkLLBp"></script>
+<script>
+grecaptcha.ready(function() {
+grecaptcha.execute('6LfFSuQUAAAAACf7MxQW0D4Bs3r3R8hKdGOkLLBp', {action: 'check'})
+    .then(function(token) {
+            // add token value to form
+            document.getElementById('g-recaptcha-response').value = token;
+        });
+    });
+</script> -->
+</head>
+<body>
+<script src="./js/js.js"></script>
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v3.0"></script>
+
+    <header class="mb-4">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark mb-4">
+            <a href="https://www.facebook.com/ABCHerramientasFinancieras" href="_new" title="Herramientas Financieras" class="navbar-brand">Herramientas Financieras</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a href="https://www.facebook.com/notes/locademia-digital/webs-para-todos-/120083879604630/" target="_new" class="nav-link">¿Qué es esto?</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+<main role="main" class="bd-content container">
+    <!--hero ini-->
+    <h1 class="h2">¡Quiero aprender sobre ... !</h1>
+    <!--hero fin-->
+    <!-- form -->
+    <div class="card">
+    <div class="card-body row">
+        <!-- FORMULARIO -->
+    <div class="col-md-12">
+    <form action="#" method="POST" id="form">
+    <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+    <input type="hidden" name="action" value="check">
+    
+        <div class="form-row">
+            <div class="form-group col-md-12 mb-6">
+            <label for="nombre">Tu nombre:</label>
+            <input type="text" name="nombre" placeholder="¿Cuál es tu nombre?" class="form-control" id="nombre" required>
+            </div>
+        </div>
+        
+        <!-- <div class="form-row">
+            <div class="form-group col-md-12 mb-6">
+                <label for="section">Tema Principal:</label>
+                <select name="section" class="form-control" id="section" required>
+                <option value="" selected></option>                    
+                <option value="Web-Empresa">Web de Mi Empresa</option>
+                <option value="Web-Servicio">Web de Mis Servicios</option>
+                <option value="Formulario-Whatsapp">Contacto por Whatsapp</option>
+                <option value="Redes-Sociales">Redes Sociales</option>
+                <option value="Blog-Viajes">Blog sobre Viajes</option>
+                <option value="Blog-Empresarial">Blog Empresarial</option>
+                <option value="Otro">Otra idea digital</option>
+                </select>
+            </div>        
+        </div> -->
+        
+        
+        <div class="form-row">
+            <div class="form-group col-md-12 mb-6">
+            <label for="tituloDesc">¿Qué haces de tu vida? ¿Qué estudias? ¿Profesión u Ocupación?</label>
+            <!-- <label for="tituloPost">Título:</label> -->
+            <input type="text" name="tituloPost" placeholder="Máx. 3 palabras" class="form-control" id="ocupacion" maxlength="100" required>
+            </div>
+        </div>
+        
+        <div class="form-row">
+            <div class="form-group col-md-12 mb-6">
+                <label for="contador">¿Cómo quieres ganar más dinero? ¿Qué quieres aprender? - Máx 300 carácteres:</label>
+                <textarea class="form-control" id="contador" name="contador" rows="3" required maxlength="300" onpaste="contarcaracteres();" onkeyup="contarcaracteres();"></textarea>
+                <div id="res" class="font-weight-light text-monospace text-secondary">0 carácter/es</div>
+            </div>
+        </div>       
+
+        <div class="form-row">
+            <div class="form-group col-md-12 mb-6">
+            <label for="invitado">Invitado por:</label>
+            <input type="text" name="invitado" placeholder="¿Quién te invita? Nombre y apellido" class="form-control" id="invitado" required>
+            <span class="text-secondary">Si no colocas una referencia válida, no obtendrás tu descuento</span>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group custom-control custom-checkbox col-md-12 mb-6">
+                <input type="checkbox" name="robot" class="custom-control-input" id="terminos" required>
+                <label for="terminos" class="custom-control-label">Acepto Términos y Condiciones</label>
+            </div>
+        </div>
+
+            <a class="btn btn-primary col-md-6 mb-3 active disabled" id="post" onclick="ok()">Enviar</a>
+            <div class="alert alert-light float-right" role="alert"><a class="alert-link" onclick="reset()">Reset</a></div>
+        </form>
+        </div>
+    </div>
+</div>
+
+    <!-- form fin-->    
+</main>
+
+    
+    <!-- footer
+    <footer class="container">
+    <p class="float-right"><a href="#">Ir arriba</a></p>
+    <p>© 2020 Formulario desarrollado por <a href="https://www.facebook.com/locademiadigital">LocademiaDigital</a> · <span data-toggle="modal" data-target="#ayuda">¿Necesitas ayuda?</span> · <span data-toggle="modal" data-target="#exampleModalLong">Términos y Condiciones</span></p>
+</footer> -->
+
+<!-- Footer -->
+<footer class="container page-footer font-small bg-light pt-4">
+
+    <!-- Footer Links -->
+    <div class="container-fluid text-center text-md-left">
+  
+      <!-- Grid row -->
+      <div class="row">
+  
+        <!-- Grid column -->
+        <div class="col-md-6 mt-md-0 mt-3">
+  
+          <!-- Content -->
+          <h5 class="text-uppercase">Herramientas Financieras</h5>
+          <p>Educación financiera <br />Finanzas personales - Trading - Inversiones.</p>
+          <p class="mx-auto"><div class="fb-like" data-href="https://www.facebook.com/ABCHerramientasFinancieras" data-layout="button" data-action="like" data-show-faces="false" data-size="large" data-share="true"></div></p>
+  
+        </div>
+        <!-- Grid column -->
+  
+        <hr class="clearfix w-100 d-md-none pb-3">
+  
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3">
+  
+          <!-- Links -->
+          <h5 class="text-uppercase">Cursos</h5>
+  
+          <ul class="list-unstyled">
+            <li>
+              <a href="https://herramientasfinancieras.thinkific.com/courses/analisis-tecnico" title="Curso Análisis Técnico" target="_new">Análisis Técnico</a>
+            </li>
+            <li>
+              <a href="https://herramientasfinancieras.thinkific.com/courses/herramientas-financieras" title="Curso Herramientas Financieras" target="_new">Herramientas Financieras</a>
+            </li>
+          </ul>
+  
+        </div>
+        <!-- Grid column -->
+  
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3">
+  
+          <!-- Links -->
+          <h5 class="text-uppercase">Redes Sociales</h5>
+  
+          <ul class="list-unstyled">
+            <li>
+              <a href="https://www.facebook.com/ABCHerramientasFinancieras/posts/" target="_new" title="Publicaciones en facebook">Últimas Publicaciones</a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/groups/GrupoHerramientasFinancieras/" target="_new" title="Grupo en Facebook de Herramientas Financieras">Grupo Herramientas Financieras</a>
+            </li>
+          </ul>
+  
+        </div>
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row -->
+  
+    </div>
+    <!-- Footer Links -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Formulario desarrollado por <a href="https://www.facebook.com/locademiadigital">LocademiaDigital</a> · <span data-toggle="modal" data-target="#ayuda">¿Necesitas ayuda?</span> · <span data-toggle="modal" data-target="#exampleModalLong">Términos y Condiciones</span>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
+
+<!-- Modal #ayuda -->
+<div class="modal fade" id="ayuda" tabindex="-1" role="dialog" aria-labelledby="ayuda" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ayuda">Estoy para ayudarte</h5>
+      </div>
+      <div class="modal-body">
+        <p>El formulario es bastante intuitivo; sirve para solicitar servicios web.</p>
+          <p>Si necesitas ayuda realmente, <a href="https://www.facebook.com/locademiadigital" target="_new">contame tus ideas y/o problemas aquí</a>.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Entendí todo, gracias!</button>
+      </div>
+    </div>
+  </div>
+</div>
+    
+<!-- Modal TOS -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Políticas de privacidad; términos y condiciones</h5>
+        </div>
+        <div class="modal-body">
+          <p>Para enviar el formulario es necesario contar con Whatsapp. Sin Whatsapp no podrá enviar el mensaje</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" onclick="location.href='https://www.facebook.com/locademiadigital'">No acepto</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Acepto</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Btstrap js -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<script type='text/javascript'>
+        document.getElementById("nombre").onchange = function() {validar()};
+        document.getElementById("ocupacion").onchange = function() {validar()};
+        document.getElementById("invitado").onchange = function() {validar()};
+        document.getElementById("terminos").onchange = function() {validar()};
+        document.getElementById("contador").onchange = function() {validar()};
+
+function contarcaracteres(){
+//Numero de caracteres permitidos
+    var total=300;
+
+     setTimeout(function(){
+     var valor=document.getElementById('contador');
+     var respuesta=document.getElementById('res');
+     var cantidad=valor.value.length;
+     document.getElementById('res').innerHTML = cantidad + ' caracteres, te quedan ' + (total - cantidad) ;
+     if(cantidad>total){
+         respuesta.style.color = "red";
+     }
+     else {
+         respuesta.style.color = "gray";
+     }
+     },10);
+
+ }
+
+function reset() {
+    document.getElementById("form").reset();
+    document.getElementById("toPost").value = "";
+    contarcaracteres()
+}
+
+    
+</script>
+<!-- fin scripts propios -->    
+</body>
+</html>
