@@ -44,7 +44,7 @@ function ok() {
     var aparte = "\r\n\r\n";
     var renglon = "\r\n"
     var waStr = "Hola 'Herramientas Financieras', soy"+ sp + name + sp + "(" + ok_ocupacion + ")" + punto + aparte + ok_conta + sp + punto + aparte + "Me invitó:" + sp + comi + ok_invitado + comi;
-    var mensaje = "https://wa.me/543512600009?text=" + encodeURIComponent(waStr);
+    var mensaje = "https://wa.me/543513056590?text=" + encodeURIComponent(waStr);
     window.open(mensaje);
 }
 
